@@ -56,7 +56,7 @@ function queryUser() {
 
 function updateUserInterface(data) {
     var databaseTable = document.getElementById('databaseTable')
-    var html = '<table><tr id="table-title-bar"><td>id</td><td>name</td><td>age</td><td>contry</td><td>Options</td></tr>'
+    var html = '<table><tr id="table-title-bar"><td>id</td><td>name</td><td>age</td><td>contry</td><td>Delete</td></tr>'
     for (const d in data) {
         if (!data[d].id) continue
         html += '<tr>'
@@ -64,7 +64,7 @@ function updateUserInterface(data) {
         for (const a in table.template) {
             html += '<td>'+data[d][table.template[a]]+'</td>'  
         }
-        html += '<td><button name="deleteButton" id="'+data[d].id+'" class="delete">delete</button></td>'
+        html += '<td style="padding: 0;"><button name="deleteButton" id="'+data[d].id+'" class="delete">Delete</button></td>'
         html += '</tr>'
     }
     html += '</table>'
