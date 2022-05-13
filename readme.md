@@ -62,4 +62,4 @@ The sintax of an **query string** is:
 + NOTE: you can put more than one condition separated by comma.
 ```
 <a name="comparation-methods"></a>
-### Comparation methods <sub>Query string operators</sub>
+### Comparation methods <small>Query string operators</small>
