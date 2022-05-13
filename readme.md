@@ -1,2 +1,1 @@
-# <span style="color: #0080ff;">JB</span>ase<span style="color: #f00;">.</span>js</h1>
-    
+# <font color="#0080ff">JB</font>ase<font color="#f00">.</font>js</h1>
