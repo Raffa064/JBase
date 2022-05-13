@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-br">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JBase</title>
+    <style>
+        table, td {
+            border: #000;
+            border-style: solid;
+            border-width: 1px;
+        }
+        
+        tr#table-title-bar {
+            background-color: #777;
+            color: #fff;
+        }
+        
+        tr#table-title-bar > td {
+            text-align: center;
+        }
+        
+        td {
+            width: 25vw;
+            padding-left: 10px;
+        }
+        
+        input {
+            width: 50vw;
+            padding: 6px;
+            margin: 10px 25vw;
+            outline: none;
+            border: #000;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+        }
+    </style>
+    <script type="module" src="./js/JBase.js"></script>
+    <script type="module" src="./js/test.js"></script>
+</head>
+
+<body>
+    <div id='databaseTable'>
+    </div>
+    <input id="queryInput" placeholder="Enter your query..."></input>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
