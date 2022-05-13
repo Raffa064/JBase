@@ -30,6 +30,15 @@ jb.insert('users', ['Fulana', 67, 'Inglaterra'])
 jb.insert('users', ['Fulana da Silva', 13, 'Japão'])
 jb.insert('users', ['Fadimi putinho', 45, 'Russia'])
 jb.insert('users', ['Senhora', 80, 'Russia'])
+jb.insert('users', ['João', 25, 'Grécia'])
+jb.insert('users', ['Maria', 26, 'Irlanda'])
+jb.insert('users', ['Mumia', 10000, 'Transilvânia'])
+jb.insert('users', ['Drácula', 1000000, 'Transilvânia'])
+jb.insert('users', ['Supe mano', 30, 'Estados Unidos'])
+jb.insert('users', ['Bat mano', 44, 'Estados Unidos'])
+jb.insert('users', ['Homi de cobre', 36, 'Estados Unidos'])
+jb.insert('users', ['Hulki', 47, 'Brasil'])
+jb.insert('users', ['Rafael Marcos', 14, 'Brasil'])
 var table = jb.getTable('users')
 updateUserInterface(table.data)
 
@@ -47,7 +56,7 @@ function queryUser() {
 
 function updateUserInterface(data) {
     var databaseTable = document.getElementById('databaseTable')
-    var html = '<table><tr id="table-title-bar"><td>id</td><td>name</td><td>age</td><td>contry</td></tr>'
+    var html = '<table><tr id="table-title-bar"><td>id</td><td>name</td><td>age</td><td>contry</td><td>Options</td></tr>'
     for (const d in data) {
         if (!data[d].id) continue
         html += '<tr>'
@@ -55,9 +64,17 @@ function updateUserInterface(data) {
         for (const a in table.template) {
             html += '<td>'+data[d][table.template[a]]+'</td>'  
         }
+        html += '<td><button name="deleteButton" id="'+data[d].id+'" class="delete">delete</button></td>'
         html += '</tr>'
     }
     html += '</table>'
     databaseTable.innerHTML = html
+    var deleteButtons = document.getElementsByName('deleteButton')
+    for (const e in deleteButtons) {
+        deleteButtons[e].onclick = function() {
+            console.log('fhkj')
+            jb.remove('users', 'id = '+this.id)
+            updateUserInterface(table.data)
+        } 
+    }
 }
-
