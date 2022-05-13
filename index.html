@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JBase</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;    
+        }
+        
         table, td {
             border: #000;
             border-style: solid;
@@ -36,15 +40,41 @@
             border-width: 1px;
             border-radius: 10px;
         }
+        
+        input:focus {
+            outline: #0080ff;
+            outline-style: solid;
+        }
+        
+        input::placeholder {
+            color: #0090ff;
+        }
+        
+        div#test > p {
+            color: #0080ff;
+        }
+        
+        div#test > p#testResult {
+            color: #ffffff00;
+            transition: color .2s linear;
+        }
+        
+        div#test:hover > p#testResult{
+            color: #0080ff;
+        }
     </style>
     <script type="module" src="./js/JBase.js"></script>
     <script type="module" src="./js/test.js"></script>
 </head>
 
 <body>
+    <input id="queryInput" placeholder="Enter your query..."></input>
     <div id='databaseTable'>
     </div>
-    <input id="queryInput" placeholder="Enter your query..."></input>
+    <div id="test">
+        <p>Tap here to see test result</p>
+        <p id="testResult"></p>
+    </div>
     <script type="module" src="./js/index.js"></script>
 </body>
 
