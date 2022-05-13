@@ -71,10 +71,11 @@ function updateUserInterface(data) {
     databaseTable.innerHTML = html
     var deleteButtons = document.getElementsByName('deleteButton')
     for (const e in deleteButtons) {
-        deleteButtons[e].onclick = function() {
-            console.log('fhkj')
-            jb.remove('users', 'id = '+this.id)
-            updateUserInterface(table.data)
-        } 
+        if (deleteButtons[e].textContent) {
+            deleteButtons[e].onclick = function() {
+                jb.remove('users', 'id = '+this.id)
+                updateUserInterface(table.data)
+            } 
+        }
     }
 }
