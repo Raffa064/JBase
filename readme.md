@@ -32,3 +32,6 @@ For search an user you can use the **query** method, with the table name and an 
 jb.insert('users', ['Rafael', 14, 'Brasil']) //name, age and contry attributes of the new user
 jb.query('users', 'name = Rafael, age > 10')
 ```
+```diff
+- NOTE: the query returns an list of matched results of the query
+```
