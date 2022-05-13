@@ -62,4 +62,19 @@ The sintax of an **query string** is:
 + NOTE: you can put more than one condition separated by comma.
 ```
 <a name="comparation-methods"></a>
-### Comparation methods <small>Query string operators</small>
+### Comparation methods / Query string operators
+The JBase query strings have support for 7 conditional operators:
+- **=** Equals
+- - Used to check if the atribute value is equals than an requested value.
+- **!=** Not equals
+- - Used to check if the atribute value is not equals than an requested value.
+- **<** Less than **(only for numeric attributes)**
+- Used to check if the atribute value is less than an requested value.
+- **>** Greater than **(only for numeric attributes)**
+- - Used to check if the attribute value is greater than an requested value.
+- **<=** Less or equals than **(only for numeric attributes)**
+- Used to check if the atribute value is less or equals than an requested value.
+- **>=** Greater or equals than **(only for numeric attributes)**
+- - Used to check if the attribute value is greater or equals  than an requested value.
+- **between** Between **(Only for numeric attributes)**
+- - Used to check if the attribute value is between 2 numbers, that needs to be used as second argument of the comparation, separated by "-". <br> Example:<br> age between 1-10
