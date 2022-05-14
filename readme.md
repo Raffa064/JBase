@@ -78,3 +78,5 @@ The JBase query strings have support for 7 conditional operators:
 - - Used to check if the attribute value is greater or equals  than an requested value.
 - **between** Between **(Only for numeric attributes)**
 - - Used to check if the attribute value is between 2 numbers, that needs to be used as second argument of the comparation, separated by "-". <br> Example:<br> age between 1-10
+
+You can see the project working [here](https://raffa064.github.io/JBase).
